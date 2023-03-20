@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     
-    @EnvironmentObject private var authModel: AuthViewModel
+    @EnvironmentObject private var authModel: Functions
     
     @State private var emailAddress: String = ""
     @State private var password: String = ""
@@ -27,7 +27,7 @@ struct MainView: View {
                     .keyboardType(.default)
             }
             Section {
-                Button( action: {authModel.signUp( emailAddress: emailAddress, password: password)},label: {
+                Button( action: {Functions.signUp( emailAddress: emailAddress, password: password)},label: {
                     Text("Sign Up").bold()})
             }
         }.navigationTitle("Sign Up")
