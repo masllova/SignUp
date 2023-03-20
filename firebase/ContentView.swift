@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @EnvironmentObject private var authModel: AuthViewModel
+    @EnvironmentObject private var authModel: Functions
     
     @State private var emailAddress: String = ""
     @State private var password: String = ""
@@ -61,7 +61,7 @@ struct ContentView: View {
                     
                     Button( action: {
                         //first
-                        authModel.signUp( emailAddress: emailAddress, password: password)
+                        Functions.signUp( emailAddress: emailAddress, password: password)
                         //second
                         if emailAddress.count != 0 && password.count != 0
                         {self.showHomeView.toggle()}
