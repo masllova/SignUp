@@ -7,7 +7,7 @@
 import SwiftUI
 import FirebaseAuth
 
-final class Functions.swift: ObservableObject {
+final class Functions: ObservableObject {
     var user: User? {
         didSet {
             objectWillChange.send()
